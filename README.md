@@ -24,31 +24,31 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 
 # Step - 2 : Install Maven & Git in Jenkins #
-1) install maven with below command
-$ sudo apt install maven -y <br/>
-2) install git with below command
-$ sudo apt install git -y <br/>
+1) install maven with below command <br/>
+$ sudo apt install maven -y <br/> <br/>
+2) install git with below command <br/>
+$ sudo apt install git -y <br/> <br/>
 
 # Step - 3 : Setup Docker in Jenkins #
-1) install docker 
-$ curl -fsSL get.docker.com | /bin/bash
+1) install docker <br/>
+$ curl -fsSL get.docker.com | /bin/bash <br/>
 
-2) Add Jenkins user to docker group
-$ sudo usermod -aG docker jenkins 
+2) Add Jenkins user to docker group <br/>
+$ sudo usermod -aG docker jenkins  <br/>
 
-3) Restart Jenkins 
-$ sudo systemctl restart jenkins
+3) Restart Jenkins  <br/>
+$ sudo systemctl restart jenkins <br/>
 
 # Step-4 :: Create EKS Management Host in AWS #
 
-1) Launch new EC2 VM ( Ubuntu )	  
-2) Connect to machine and install kubectl using below commands
+$ 1) Launch new EC2 VM ( Ubuntu )	  
+$ 2) Connect to machine and install kubectl using below commands
 $ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl <br/>
 $ chmod +x ./kubectl <br/>
 $ sudo mv ./kubectl /usr/local/bin <br/>
 $ kubectl version --short --client <br/>
 
-3) Install AWS CLI latest version using below commands
+$ 3) Install AWS CLI latest version using below commands
 
 $ sudo apt install unzip <br/>
 $ cd  <br/>
