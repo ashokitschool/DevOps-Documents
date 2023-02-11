@@ -6,19 +6,19 @@
 5) Kubernetes
 
 # Step-1 : Jenkins Server Setup #
-1) Create Ubuntu VM using AWS EC2 
-2) Enable SSH & 8080 Ports in Ec2 Security Group
-3) Install Java & Jenkins using below commands
-$ sudo apt-get update
-$ sudo apt-get install default-jdk
-$ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-$ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-$ sudo apt-get update
-$ sudo apt-get install jenkins
-$ sudo systemctl status jenkins
-# Copy jenkins admin pwd
+1) Create Ubuntu VM using AWS EC2 <br/>
+2) Enable SSH & 8080 Ports in Ec2 Security Group <br/>
+3) Install Java & Jenkins using below commands <br/>
+$ sudo apt-get update <br/>
+$ sudo apt-get install default-jdk <br/>
+$ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add - <br/>
+$ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list' <br/>
+$ sudo apt-get update <br/>
+$ sudo apt-get install jenkins <br/>
+$ sudo systemctl status jenkins <br/>
+## Copy jenkins admin pwd
 $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-# Open jenkins server in browser using VM public ip
+## Open jenkins server in browser using VM public ip
            URL : http://public-ip:8080/
 -> Create Admin Account & Install Required Plugins in Jenkins
 
@@ -100,13 +100,13 @@ $ kubectl get nodes
 
 # Step-7 :: Install AWS CLI in JENKINS Server #
 
-URL : https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+URL : https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html 
 
-$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-$ unzip awscliv2.zip
-$ sudo ./aws/install
-$ aws --version 
-
+$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" <br/>
+$ unzip awscliv2.zip <br/>
+$ sudo ./aws/install <br/>
+$ aws --version <br/>
+ 
 # Step-8 :: Install Kubectl in JENKINS Server #
 => Execute below commands in Jenkins server
 $ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
