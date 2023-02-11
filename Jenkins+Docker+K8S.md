@@ -153,3 +153,5 @@ $ kubectl version --short --client <br/>
 URL : http://Node-public-ip:NodePort/context-path
 	
 # We are done with our Setup #
+	
+# Step - 14 : Delete Cluster and other resources we have used to avoid billing #	
