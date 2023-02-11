@@ -16,8 +16,8 @@ $ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/s
 $ sudo apt-get update <br/>
 $ sudo apt-get install jenkins <br/>
 $ sudo systemctl status jenkins <br/>
-3) Copy jenkins admin pwd
-$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+3) Copy jenkins admin pwd <br/>
+	$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 4) Open jenkins server in browser using VM public ip <br/>
            URL : http://public-ip:8080/
 5) Create Admin Account & Install Required Plugins in Jenkins
