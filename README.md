@@ -134,7 +134,7 @@ $ kubectl version --short --client <br/>
 **Stage-4 : Push Docker Image to Registry** <br/>
 **Stage-5 : Trigger CD Job** <br/>
 	
-# Step-12 : Create Jenkins CD Pipeline #
+# Step-11 : Create Jenkins CD Pipeline #
 
 **Stage-1 : Clone k8s manifestfiles** <br/>
 **Stage-2 : Deploy app in k8s eks cluster** <br/>
