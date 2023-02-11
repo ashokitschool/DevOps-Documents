@@ -57,7 +57,7 @@ $ sudo systemctl restart jenkins <br/>
 	$ sudo ./aws/install <br/>
 	$ aws --version <br/>
 
-4) Install eksctl using below commands 
+4) Install eksctl using below commands <br/>
 	$ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp <br/>
 	$ sudo mv /tmp/eksctl /usr/local/bin <br/>
 	$ eksctl version <br/>
