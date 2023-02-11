@@ -126,5 +126,9 @@ $ kubectl version --short --client <br/>
 **Note: We should be able to see EKS cluster nodes here.**
 
 
-# Step-10 : Create Jenkins Pipeline #
+# Step-10 : Create Jenkins CI Pipeline #
+	
+# Step-12 : Create Jenkins CD Pipeline #
+	
+
 
