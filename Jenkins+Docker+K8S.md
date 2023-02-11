@@ -5,7 +5,7 @@
 4) Docker
 5) Kubernetes
 
-# Step-1 : Jenkins Server Setup #
+# Step - 1 : Jenkins Server Setup #
 1) Create Ubuntu VM using AWS EC2 <br/>
 2) Enable SSH & 8080 Ports in Ec2 Security Group <br/>
 3) Install Java & Jenkins using below commands <br/>
@@ -39,7 +39,7 @@ $ sudo usermod -aG docker jenkins  <br/>
 3) Restart Jenkins  <br/>
 $ sudo systemctl restart jenkins <br/>
 
-# Step-4 : Create EKS Management Host in AWS #
+# Step - 4 : Create EKS Management Host in AWS #
 
 1) Launch new EC2 VM ( Ubuntu )	  
 2) Connect to machine and install kubectl using below commands  
@@ -62,7 +62,7 @@ $ sudo systemctl restart jenkins <br/>
 	$ sudo mv /tmp/eksctl /usr/local/bin <br/>
 	$ eksctl version <br/>
 
-# Step-5 : Create IAM role & attach to EKS Management Host #
+# Step - 5 : Create IAM role & attach to EKS Management Host #
 
 1) Create New Role using IAM service ( Select Usecase - ec2 ) 	
 2) Add below permissions for the role <br/>
@@ -75,7 +75,7 @@ $ sudo systemctl restart jenkins <br/>
 3) Enter Role Name (eksroleec2) 
 4) Attach created role to EKS Management Host (Select EC2 => Click on Security => attach IAM role we have created) 
   
-# Step-6 : Create EKS Cluster using eksctl # 
+# Step - 6 : Create EKS Cluster using eksctl # 
 **Syntax:** 
 
 eksctl create cluster --name cluster-name  \
@@ -91,7 +91,7 @@ Note: Cluster creation will take 5 to 10 mins of time (we have to wait). After c
 
 $ kubectl get nodes  
 
-# Step-7 :: Install AWS CLI in JENKINS Server #
+# Step - 7 :: Install AWS CLI in JENKINS Server #
 
 URL : https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html  
 
@@ -102,7 +102,7 @@ $ unzip awscliv2.zip <br/>
 $ sudo ./aws/install <br/>
 $ aws --version <br/>
  
-# Step-8 : Install Kubectl in JENKINS Server #
+# Step - 8 : Install Kubectl in JENKINS Server #
 **Execute below commands in Jenkins server to install kubectl**
 	
 $ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl <br/>
@@ -110,7 +110,7 @@ $ chmod +x ./kubectl <br/>
 $ sudo mv ./kubectl /usr/local/bin <br/>
 $ kubectl version --short --client <br/>
 
-# Step-9 : Update EKS Cluster Config File in Jenkins Server #
+# Step - 9 : Update EKS Cluster Config File in Jenkins Server #
 	
 1) Execute below command in Eks Management host & copy kube config file data <br/>
 	$ cat .kube/config 
@@ -126,7 +126,7 @@ $ kubectl version --short --client <br/>
 **Note: We should be able to see EKS cluster nodes here.**
 
 
-# Step-10 : Create Jenkins CI Pipeline #
+# Step - 10 : Create Jenkins CI Pipeline #
 
 - **Stage-1 : Clone Git Repo** <br/> 
 - **Stage-2 : Build** <br/>
@@ -134,17 +134,17 @@ $ kubectl version --short --client <br/>
 - **Stage-4 : Push Docker Image to Registry** <br/>
 - **Stage-5 : Trigger CD Job** <br/>
 	
-# Step-11 : Create Jenkins CD Pipeline #
+# Step - 11 : Create Jenkins CD Pipeline #
 
 - **Stage-1 : Clone k8s manifestfiles** <br/>
 - **Stage-2 : Deploy app in k8s eks cluster** <br/>
 - **Stage-3 : Send confirmatin email** <br/>
 
 	
-# Step-12 : Trigger Jenkins CI Job #
+# Step - 12 : Trigger Jenkins CI Job #
 - **CI Job will execute all the stages and it will trigger CD Job** <br/>
 - **CD Job will fetch docker image and it will deploy on cluster** <br/>
 	
-# Step-13 : Access Application in Browser #
+# Step - 13 : Access Application in Browser #
 - **We should be able to access our application** <br/>
 URL : http://Node-public-ip:NodePort/context-path
