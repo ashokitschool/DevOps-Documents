@@ -128,17 +128,17 @@ $ kubectl version --short --client <br/>
 
 # Step-10 : Create Jenkins CI Pipeline #
 
-**Stage-1 : Clone Git Repo** <br/> 
-**Stage-2 : Build** <br/>
-**Stage-3 : Create Docker Image** <br/>
-**Stage-4 : Push Docker Image to Registry** <br/>
-**Stage-5 : Trigger CD Job** <br/>
+- **Stage-1 : Clone Git Repo** <br/> 
+- **Stage-2 : Build** <br/>
+- **Stage-3 : Create Docker Image** <br/>
+- **Stage-4 : Push Docker Image to Registry** <br/>
+- **Stage-5 : Trigger CD Job** <br/>
 	
 # Step-11 : Create Jenkins CD Pipeline #
 
-**Stage-1 : Clone k8s manifestfiles** <br/>
-**Stage-2 : Deploy app in k8s eks cluster** <br/>
-**Stage-3 : Send confirmatin email** <br/>
+- **Stage-1 : Clone k8s manifestfiles** <br/>
+- **Stage-2 : Deploy app in k8s eks cluster** <br/>
+- **Stage-3 : Send confirmatin email** <br/>
 
 	
 # Step-12 : Trigger Jenkins CI Job #
