@@ -120,11 +120,11 @@ $ kubectl version --short --client <br/>
 	$ sudo mkdir .kube  <br/>
 	$ sudo vi .kube/config  <br/>
 
-3) check eks nodes 
+3) check eks nodes <br/>
 	$ kubectl get nodes 
 
 Note: We should be able to see EKS cluster nodes here. 
 
-#####################################
-#Step-10 : Create Jenkins Pipeline #
-#####################################
+
+# Step-10 : Create Jenkins Pipeline #
+
