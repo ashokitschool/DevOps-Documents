@@ -154,4 +154,4 @@ URL : http://Node-public-ip:NodePort/context-path
 	
 # We are done with our Setup #
 	
-## Step - 14 : Delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
+## Step - 14 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
