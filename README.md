@@ -85,7 +85,7 @@ eksctl create cluster --name cluster-name  \
 --nodes-max 2 \ 
 --zones <AZ-1>,<AZ-2>
 
-Example: $ eksctl create cluster --name ashokit-cluster1 --region us-east-1 --node-type t2.medium  --zones us-east-1a,us-east-1b
+**Example: $ eksctl create cluster --name ashokit-cluster1 --region us-east-1 --node-type t2.medium  --zones us-east-1a,us-east-1b**
 
 Note: Cluster creation will take 5 to 10 mins of time (we have to wait). After cluster created we can check nodes using below command.	
 
@@ -123,7 +123,7 @@ $ kubectl version --short --client <br/>
 3) check eks nodes <br/>
 	$ kubectl get nodes 
 
-Note: We should be able to see EKS cluster nodes here. 
+**Note: We should be able to see EKS cluster nodes here.**
 
 
 # Step-10 : Create Jenkins Pipeline #
