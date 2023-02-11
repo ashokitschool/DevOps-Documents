@@ -85,7 +85,7 @@ eksctl create cluster --name cluster-name  \
 --nodes-max 2 \ 
 --zones <AZ-1>,<AZ-2>
 
-**Example: $ eksctl create cluster --name ashokit-cluster1 --region us-east-1 --node-type t2.medium  --zones us-east-1a,us-east-1b**
+**Example: $ eksctl create cluster --name ashokit-cluster1 --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b**
 
 Note: Cluster creation will take 5 to 10 mins of time (we have to wait). After cluster created we can check nodes using below command.	
 
