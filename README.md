@@ -25,9 +25,9 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 # Step - 2 : Install Maven & Git in Jenkins #
 1) install maven with below command <br/>
-$ sudo apt install maven -y <br/> <br/>
+- $ sudo apt install maven -y <br/> <br/>
 2) install git with below command <br/>
-$ sudo apt install git -y <br/> <br/>
+- $ sudo apt install git -y <br/> <br/>
 
 # Step - 3 : Setup Docker in Jenkins #
 1) install docker <br/>
