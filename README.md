@@ -112,13 +112,13 @@ $ kubectl version --short --client <br/>
 
 # Step-9 :: Update EKS Cluster Config File in Jenkins Server #
 	
-1) Execute below command in Eks Management host & copy kube config file data 
+1) Execute below command in Eks Management host & copy kube config file data <br/>
 	$ cat .kube/config 
 
-2) Execute below commands in Jenkins Server and paste kube config file 
-	$ cd /var/lib/jenkins 
-	$ sudo mkdir .kube 
-	$ sudo vi .kube/config 
+2) Execute below commands in Jenkins Server and paste kube config file  <br/>
+	$ cd /var/lib/jenkins <br/>
+	$ sudo mkdir .kube  <br/>
+	$ sudo vi .kube/config  <br/>
 
 3) check eks nodes 
 	$ kubectl get nodes 
