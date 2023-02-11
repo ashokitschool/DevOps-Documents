@@ -28,13 +28,13 @@ $ sudo apt install maven -y <br/>
 $ sudo apt install git -y <br/>
 
 # Step - 3 : Setup Docker in Jenkins #
-## install docker 
+1) install docker 
 $ curl -fsSL get.docker.com | /bin/bash
 
-## Add Jenkins user to docker group
+2) Add Jenkins user to docker group
 $ sudo usermod -aG docker jenkins 
 
-## Restart Jenkins 
+3) Restart Jenkins 
 $ sudo systemctl restart jenkins
 
 # Step-4 :: Create EKS Management Host in AWS #
