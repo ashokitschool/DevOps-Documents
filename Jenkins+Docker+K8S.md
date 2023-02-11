@@ -141,5 +141,9 @@ $ kubectl version --short --client <br/>
 **Stage-3 : Send confirmatin email** <br/>
 
 	
-
-
+# Step-12 : Trigger Jenkins CI Job #
+**CI Job will execute all the stages and it will trigger CD Job**
+	
+# Step-13 : Access Application in Browser #
+**We should be able to access our application** <br/>
+URL : http://Node-public-ip:NodePort/context-path
