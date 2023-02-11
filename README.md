@@ -95,7 +95,7 @@ $ kubectl get nodes
 
 URL : https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html  
 
-** Execute below commands to install AWS CLI **
+**Execute below commands to install AWS CLI**
 
 $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" <br/>
 $ unzip awscliv2.zip <br/>
@@ -103,7 +103,7 @@ $ sudo ./aws/install <br/>
 $ aws --version <br/>
  
 # Step-8 :: Install Kubectl in JENKINS Server #
-** Execute below commands in Jenkins server to install kubectl **
+**Execute below commands in Jenkins server to install kubectl**
 	
 $ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl <br/>
 $ chmod +x ./kubectl <br/>
