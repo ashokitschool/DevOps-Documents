@@ -39,7 +39,7 @@ $ sudo usermod -aG docker jenkins  <br/>
 3) Restart Jenkins  <br/>
 $ sudo systemctl restart jenkins <br/>
 
-# Step-4 :: Create EKS Management Host in AWS #
+# Step-4 : Create EKS Management Host in AWS #
 
 1) Launch new EC2 VM ( Ubuntu )	  
 2) Connect to machine and install kubectl using below commands  
@@ -62,7 +62,7 @@ $ sudo systemctl restart jenkins <br/>
 	$ sudo mv /tmp/eksctl /usr/local/bin <br/>
 	$ eksctl version <br/>
 
-# Step-5 :: Create IAM role & attach to EKS Management Host #
+# Step-5 : Create IAM role & attach to EKS Management Host #
 
 1) Create New Role using IAM service ( Select Usecase - ec2 ) 	
 2) Add below permissions for the role <br/>
@@ -75,8 +75,8 @@ $ sudo systemctl restart jenkins <br/>
 3) Enter Role Name (eksroleec2) 
 4) Attach created role to EKS Management Host (Select EC2 => Click on Security => attach IAM role we have created) 
   
-# Step-6 :: Create EKS Cluster using eksctl # 
-Syntax: 
+# Step-6 : Create EKS Cluster using eksctl # 
+**Syntax:** 
 
 eksctl create cluster --name cluster-name  \
 --region region-name \
@@ -102,7 +102,7 @@ $ unzip awscliv2.zip <br/>
 $ sudo ./aws/install <br/>
 $ aws --version <br/>
  
-# Step-8 :: Install Kubectl in JENKINS Server #
+# Step-8 : Install Kubectl in JENKINS Server #
 **Execute below commands in Jenkins server to install kubectl**
 	
 $ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl <br/>
@@ -110,7 +110,7 @@ $ chmod +x ./kubectl <br/>
 $ sudo mv ./kubectl /usr/local/bin <br/>
 $ kubectl version --short --client <br/>
 
-# Step-9 :: Update EKS Cluster Config File in Jenkins Server #
+# Step-9 : Update EKS Cluster Config File in Jenkins Server #
 	
 1) Execute below command in Eks Management host & copy kube config file data <br/>
 	$ cat .kube/config 
