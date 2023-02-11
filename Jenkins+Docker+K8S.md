@@ -66,11 +66,11 @@ $ sudo systemctl restart jenkins <br/>
 
 1) Create New Role using IAM service ( Select Usecase - ec2 ) 	
 2) Add below permissions for the role <br/>
-		IAM - fullaccess <br/>
-		VPC - fullaccess <br/>
-		EC2 - fullaccess  <br/>
-		CloudFomration - fullaccess  <br/>
-		Administrator - acces <br/>
+	- IAM - fullaccess <br/>
+	- VPC - fullaccess <br/>
+	- EC2 - fullaccess  <br/>
+	- CloudFomration - fullaccess  <br/>
+	- Administrator - acces <br/>
 		
 3) Enter Role Name (eksroleec2) 
 4) Attach created role to EKS Management Host (Select EC2 => Click on Security => attach IAM role we have created) 
