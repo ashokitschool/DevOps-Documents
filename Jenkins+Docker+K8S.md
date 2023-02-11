@@ -126,7 +126,7 @@ $ kubectl version --short --client <br/>
 **Note: We should be able to see EKS cluster nodes here.**
 
 
-# Step - 10 : Create Jenkins CI Pipeline #
+# Step - 10 : Create Jenkins CI Job #
 
 - **Stage-1 : Clone Git Repo** <br/> 
 - **Stage-2 : Build** <br/>
@@ -134,7 +134,7 @@ $ kubectl version --short --client <br/>
 - **Stage-4 : Push Docker Image to Registry** <br/>
 - **Stage-5 : Trigger CD Job** <br/>
 	
-# Step - 11 : Create Jenkins CD Pipeline #
+# Step - 11 : Create Jenkins CD Job #
 
 - **Stage-1 : Clone k8s manifestfiles** <br/>
 - **Stage-2 : Deploy app in k8s eks cluster** <br/>
@@ -148,3 +148,5 @@ $ kubectl version --short --client <br/>
 # Step - 13 : Access Application in Browser #
 - **We should be able to access our application** <br/>
 URL : http://Node-public-ip:NodePort/context-path
+	
+# We are done with our Setup #
