@@ -142,7 +142,9 @@ $ kubectl version --short --client <br/>
 
 	
 # Step-12 : Trigger Jenkins CI Job #
-**CI Job will execute all the stages and it will trigger CD Job**
+**1. CI Job will execute all the stages and it will trigger CD Job**
+**2. CD Job will fetch docker image and it will deploy on cluster**
+
 	
 # Step-13 : Access Application in Browser #
 **We should be able to access our application** <br/>
