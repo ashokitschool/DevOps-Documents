@@ -25,9 +25,9 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 # Step - 2 : Install Maven & Git in Jenkins #
 1) install maven with below command <br/>
-- $ sudo apt install maven -y <br/> <br/>
+ $ sudo apt install maven -y <br/> <br/>
 2) install git with below command <br/>
-- $ sudo apt install git -y <br/> <br/>
+ $ sudo apt install git -y <br/> <br/>
 
 # Step - 3 : Setup Docker in Jenkins #
 1) install docker <br/>
@@ -62,17 +62,15 @@ $ sudo systemctl restart jenkins <br/>
 	$ sudo mv /tmp/eksctl /usr/local/bin <br/>
 	$ eksctl version <br/>
 
-
 # Step-5 :: Create IAM role & attach to EKS Management Host #
 
-1) Create New Role using IAM service ( Select Usecase - ec2 ) 
-	
-2) Add below permissions for the role 
+1) Create New Role using IAM service ( Select Usecase - ec2 ) 	
+2) Add below permissions for the role <br/>
 		IAM - fullaccess <br/>
 		VPC - fullaccess <br/>
-		ec2 - fullaccess  <br/>
-		cloudfomration - fullaccess  <br/>
-		administrator - acces <br/>
+		EC2 - fullaccess  <br/>
+		CloudFomration - fullaccess  <br/>
+		Administrator - acces <br/>
 		
 3) Enter Role Name (eksroleec2) 
 4) Attach created role to EKS Management Host (Select EC2 => Click on Security => attach IAM role we have created) 
