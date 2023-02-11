@@ -42,7 +42,7 @@ $ sudo systemctl restart jenkins <br/>
 # Step-4 :: Create EKS Management Host in AWS #
 
 1) Launch new EC2 VM ( Ubuntu )	  
-2) Connect to machine and install kubectl using below commands
+2) Connect to machine and install kubectl using below commands  
 	$ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl <br/>
 	$ chmod +x ./kubectl <br/>
 	$ sudo mv ./kubectl /usr/local/bin <br/>
