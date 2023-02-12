@@ -65,7 +65,7 @@ $ docker version
 	$ sudo mv /tmp/eksctl /usr/local/bin <br/>
 	$ eksctl version <br/>
 
-# Step - 5 : Create IAM role & attach to EKS Management Host #
+# Step - 5 : Create IAM role & attach to EKS Management Host & Jenkins Server #
 
 1) Create New Role using IAM service ( Select Usecase - ec2 ) 	
 2) Add below permissions for the role <br/>
@@ -76,7 +76,8 @@ $ docker version
 	- Administrator - acces <br/>
 		
 3) Enter Role Name (eksroleec2) 
-4) Attach created role to EKS Management Host (Select EC2 => Click on Security => attach IAM role we have created) 
+4) Attach created role to EKS Management Host (Select EC2 => Click on Security => Modify IAM Role => attach IAM role we have created) 
+5) Attach created role to Jenkins Machine (Select EC2 => Click on Security => Modify IAM Role => attach IAM role we have created) 
   
 # Step - 6 : Create EKS Cluster using eksctl # 
 **Syntax:** 
