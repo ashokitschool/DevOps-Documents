@@ -40,7 +40,7 @@ $ sudo usermod -aG docker jenkins  <br/>
 $ sudo systemctl restart jenkins <br/>
 
 4) Verify docker installation  <br/>
-$ docker version
+$ sudo docker version
 
 # Step - 4 : Create EKS Management Host in AWS #
 
