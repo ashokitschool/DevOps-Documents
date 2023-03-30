@@ -33,7 +33,7 @@
 		
 3) Enter Role Name (eksroleec2) 
 4) Attach created role to EKS Management Host (Select EC2 => Click on Security => Modify IAM Role => attach IAM role we have created) 
-5)   
+
 # Step - 3 : Create EKS Cluster using eksctl # 
 **Syntax:** 
 
@@ -44,7 +44,9 @@ eksctl create cluster --name cluster-name  \
 --nodes-max 2 \ 
 --zones <AZ-1>,<AZ-2>
 
-**Example: $ eksctl create cluster --name ashokit-cluster4 --region us-east-1 --node-type t2.medium  --zones us-east-1a,us-east-1b**
+**N. Virgina Region: $ eksctl create cluster --name ashokit-cluster4 --region us-east-1 --node-type t2.medium  --zones us-east-1a,us-east-1b**
+	
+**Mumbai Region: $ eksctl create cluster --name ashokit-cluster4 --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b**	
 
 Note: Cluster creation will take 5 to 10 mins of time (we have to wait). After cluster created we can check nodes using below command.	
 
