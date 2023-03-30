@@ -56,4 +56,4 @@ $ kubectl get nodes
 
 # We are done with our Setup #
 	
-## Step - 14 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
+## Step - 4 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
