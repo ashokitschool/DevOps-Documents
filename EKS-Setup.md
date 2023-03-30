@@ -57,7 +57,6 @@ $ kubectl get nodes
 	$ cat .kube/config 
 
 2) Execute below commands in Jenkins Server and paste kube config file  <br/>
-	$ cd /var/lib/jenkins <br/>
 	$ sudo mkdir .kube  <br/>
 	$ sudo vi .kube/config  <br/>
 
