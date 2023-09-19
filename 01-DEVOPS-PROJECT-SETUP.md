@@ -7,6 +7,12 @@
 5) Nexus Repo
 6) Jenkins
 
+## Step-0 : Create Jenkins Pipeline (Scripted)
+
+node {
+
+}
+
 ## Step-1 : Create github stage 
 
  stage('clone repo') { <br/>          
