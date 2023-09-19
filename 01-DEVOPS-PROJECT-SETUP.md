@@ -13,11 +13,15 @@ node {
 
 }
 
-## Step-1 : Create github stage 
+## Step-1 : Add github stage to clone git repository
 
- stage('clone repo') { <br/>          
+1) Use Pipeline Syntax and Generate Script for Git Clone
+
+```
+ stage('clone repo') {        
   git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git'
 }
+```
 
 ## Step-2 : Create Maven Build Stage (Add maven in global tools)
 
