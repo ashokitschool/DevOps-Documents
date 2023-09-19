@@ -9,40 +9,40 @@
 
 # Step-1 : Create github stage 
 
-stage('clone repo') {           
-   git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git'        
+stage('clone repo') { <br/>          
+   git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git' <br/>
 }
 
 # Step-2 : Create Maven Build Stage (Add maven in global tools)
 
-stage ('Maven Build') {
-        def mavenHome = tool name: "Maven-3.9.4", type: "maven"
-        def mavenCMD = "${mavenHome}/bin/mvn"
-        sh "${mavenCMD} clean package"
+stage ('Maven Build') { <br/>
+        def mavenHome = tool name: "Maven-3.9.4", type: "maven" <br/>
+        def mavenCMD = "${mavenHome}/bin/mvn" <br/>
+        sh "${mavenCMD} clean package" <br/>
 }
 
 
 # Step-3 : Create SonarQube stage
 
-a) Start Sonar Server 
-b) Login into Sonar Server & Generate Sonar Token 
-	Ex: cedbc0b89e45c58f4a86e4687f2df2a2241e3369
-c) Add Sonar Token in 'Jenkins Credentials' as Secret Text
-			-> Manager Jenkins 
-			-> Credentials 
-			-> Add Credentials 
-			-> Select Secret text
-			-> Enter Sonar Token as secret text 
+a) Start Sonar Server <br/>
+b) Login into Sonar Server & Generate Sonar Token  <br/>
+	Ex: cedbc0b89e45c58f4a86e4687f2df2a2241e3369 <br/>
+c) Add Sonar Token in 'Jenkins Credentials' as Secret Text <br/>
+			-> Manager Jenkins  <br/>
+			-> Credentials  <br/>
+			-> Add Credentials <br/>
+			-> Select Secret text <br/>
+			-> Enter Sonar Token as secret text  <br/>
 
-d) Install SonarQube Scanner Plugin
+d) Install SonarQube Scanner Plugin <br/>
 -> Manage Jenkins -> Plugins -> Available -> Sonar Qube Scanner Plugin -> Install it
 
-e) Configure SonarQube Server
+e) Configure SonarQube Server <br/>
 -> Manage Jenkins -> Configure System -> Sonar Qube Servers -> Add Sonar Qube Server 
 		
-				- Name : Sonar-Server-7.8
-				- Server URL : http://52.66.247.11:9000/   (Give your sonar server url here)
-				- Add Sonar Server Token			
+				- Name : Sonar-Server-7.8 <br/>
+				- Server URL : http://52.66.247.11:9000/   (Give your sonar server url here) <br/>
+				- Add Sonar Server Token <br/>			
 
 f) Add SonarQube Stage in Jenkins Pipeline
 
