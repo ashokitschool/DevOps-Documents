@@ -15,7 +15,13 @@ node {
 
 ## Step-1 : Add github stage to clone git repository
 
-1) Use Pipeline Syntax and Generate Script for Git Clone
+1) Use Pipeline Syntax and Generate Script for Git Clone with Repo Details
+
+```     
+  git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git'
+```
+
+2) Add Generated Script in Pipeline as a stage
 
 ```
  stage('clone repo') {        
@@ -25,14 +31,18 @@ node {
 
 ## Step-2 : Create Maven Build Stage (Add maven in global tools)
 
+1) Configure Maven as Global Tool in Manage Jenkins
+
+2) Add Maven Build Stage in Pipeline
+```
  stage ('Maven Build') { <br/>
-       def mavenHome = tool name: "Maven-3.9.4", type: "maven" <br/>
-        def mavenCMD = "${mavenHome}/bin/mvn" <br/>
-        sh "${mavenCMD} clean package" <br/>
+       def mavenHome = tool name: "Maven-3.9.4", type: "maven"
+       def mavenCMD = "${mavenHome}/bin/mvn"
+       sh "${mavenCMD} clean package"
  }
+```
 
-
-## Step-3 : Create SonarQube stage
+## Step-3 : Add SonarQube stage
 
 1) Start Sonar Server <br/>
 2) Login into Sonar Server & Generate Sonar Token  <br/>
@@ -49,21 +59,21 @@ node {
 
 5) Configure SonarQube Server <br/>
 -> Manage Jenkins -> Configure System -> Sonar Qube Servers -> Add Sonar Qube Server 
-		
-				- Name : Sonar-Server-7.8 <br/>
-				- Server URL : http://52.66.247.11:9000/   (Give your sonar server url here) <br/>
-				- Add Sonar Server Token <br/>			
+		- Name : Sonar-Server-7.8
+		- Server URL : http://52.66.247.11:9000/   (Give your sonar server url here)
+		- Add Sonar Server Token
 
 6) Add SonarQube Stage in Jenkins Pipeline
 
+```
 stage('SonarQube analysis') {
-			withSonarQubeEnv('Sonar-Server-7.8') {
-			def mavenHome = tool name: "Maven-3.8.6", type: "maven"
-			def mavenCMD = "${mavenHome}/bin/mvn"
-			sh "${mavenCMD} sonar:sonar"
-    	}
+	withSonarQubeEnv('Sonar-Server-7.8') {
+	def mavenHome = tool name: "Maven-3.8.6", type: "maven"
+	def mavenCMD = "${mavenHome}/bin/mvn"
+	sh "${mavenCMD} sonar:sonar"
+    }
 }
-
+```
 
 ## Step-4 : Create Nexus Stage
 
@@ -71,10 +81,11 @@ stage('SonarQube analysis') {
 2) Create Nexus Repository 
 3) Install Nexus Repository Plugin using Manage Plugins   ( Plugin Name : Nexus Artifact Uploader)
 4) Generate Nexus Pipeline Syntax
-
+```
 stage ('Nexus Upload'){
 nexusArtifactUploader artifacts: [[artifactId: '01-Maven-Web-App', classifier: '', file: 'target/01-maven-web-app.war', type: 'war']], credentialsId: 'Nexus-Credentials', groupId: 'in.ashokit', nexusUrl: '13.127.185.241:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'ashokit-snapshot-repository', version: '1.0-SNAPSHOT'
 }
+```
 
 
 ## Step-5 : Create Deploy Stage
@@ -83,8 +94,11 @@ nexusArtifactUploader artifacts: [[artifactId: '01-Maven-Web-App', classifier: '
 2) Install SSH Agent plugin using Manage Plugins <br/>
 3) Generate SSH Agent and configure stage <br/>
 4) Add Tomcat Server as 'Uname with Secret Text' <br/>
+
+```
 stage ('Deploy'){ 
 sshagent(['Tomcat-Server-Agent']) {
 sh 'scp -o StrictHostKeyChecking=no target/01-maven-web-app.war ec2-user@15.207.100.83:/home/ec2-user/apache-tomcat-9.0.80/webapps'
   }
 }
+```
