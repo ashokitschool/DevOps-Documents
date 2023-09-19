@@ -9,17 +9,17 @@
 
 # Step-1 : Create github stage 
 
-stage('clone repo') { <br/>          
-   git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git' <br/>
-}
+- stage('clone repo') { <br/>          
+-  git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git' <br/>
+- }
 
 # Step-2 : Create Maven Build Stage (Add maven in global tools)
 
-stage ('Maven Build') { <br/>
-        def mavenHome = tool name: "Maven-3.9.4", type: "maven" <br/>
-        def mavenCMD = "${mavenHome}/bin/mvn" <br/>
-        sh "${mavenCMD} clean package" <br/>
-}
+- stage ('Maven Build') { <br/>
+-       def mavenHome = tool name: "Maven-3.9.4", type: "maven" <br/>
+-        def mavenCMD = "${mavenHome}/bin/mvn" <br/>
+-        sh "${mavenCMD} clean package" <br/>
+- }
 
 
 # Step-3 : Create SonarQube stage
