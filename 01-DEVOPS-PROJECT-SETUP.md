@@ -1,10 +1,10 @@
 # DevOps Project Setup with CI CD Pipeline
 
-1) Maven
-2) Git Hub
-3) Tomcat
-4) SonarQube
-5) Nexus Repo
+1) Git Hub
+2) Maven
+3) SonarQube
+4) Nexus Repo
+5) Tomcat
 6) Jenkins
 
 ## Step-0 : Create Jenkins Pipeline (Scripted)
