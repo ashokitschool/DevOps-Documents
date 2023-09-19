@@ -9,10 +9,11 @@
 
 ## Step-0 : Create Jenkins Pipeline (Scripted)
 
+```
 node {
 
 }
-
+```
 ## Step-1 : Add github stage to clone git repository
 
 1) Use Pipeline Syntax and Generate Script for Git Clone with Repo Details
@@ -35,7 +36,7 @@ node {
 
 2) Add Maven Build Stage in Pipeline
 ```
- stage ('Maven Build') { <br/>
+ stage ('Maven Build') {
        def mavenHome = tool name: "Maven-3.9.4", type: "maven"
        def mavenCMD = "${mavenHome}/bin/mvn"
        sh "${mavenCMD} clean package"
