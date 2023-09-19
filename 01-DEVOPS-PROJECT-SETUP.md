@@ -69,12 +69,12 @@ nexusArtifactUploader artifacts: [[artifactId: '01-Maven-Web-App', classifier: '
 
 # Step-5 : Create Deploy Stage
 
--> Start Tomcat Server
--> Install SSH Agent plugin using Manage Plugins
--> Generate SSH Agent and configure stage
--> Add Tomcat Server as 'Uname with Secret Text'
-stage ('Deploy'){
-       sshagent(['Tomcat-Server-Agent']) {
-		sh 'scp -o StrictHostKeyChecking=no target/01-maven-web-app.war ec2-user@15.207.100.83:/home/ec2-user/apache-tomcat-9.0.80/webapps'
-	   }
+-> Start Tomcat Server <br/>
+-> Install SSH Agent plugin using Manage Plugins <br/>
+-> Generate SSH Agent and configure stage <br/>
+-> Add Tomcat Server as 'Uname with Secret Text' <br/>
+stage ('Deploy'){ 
+sshagent(['Tomcat-Server-Agent']) {
+sh 'scp -o StrictHostKeyChecking=no target/01-maven-web-app.war ec2-user@15.207.100.83:/home/ec2-user/apache-tomcat-9.0.80/webapps'
+  }
 }
