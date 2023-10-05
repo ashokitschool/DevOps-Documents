@@ -15,7 +15,7 @@ $ sudo yum update -y
 $ sudo yum install docker -y
 $ sudo service docker start
 ```
-## Step-3 : Add ec2-user to docker group by executing below command
+## Step-3 : Add ec2-user to docker group 
 
 ```
 $ sudo usermod -aG docker ec2-user
@@ -24,7 +24,7 @@ $ sudo usermod -aG docker ec2-user
 ## Step-4 : Restart the session
 $ exit
 
-## Step-5 : Then press 'R' to restart the session (This is in MobaXterm)
+## Step-5 : Rress 'R' to restart the session (This is in MobaXterm)
 
 ## Step-6 :  Verify docker installation
 $ docker -v
@@ -34,3 +34,7 @@ $ docker -v
 $ docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:lts-community
 ```
 
+## Step-8: Enable 9000 port number in Security Group Inbound Rules & Access Sonar Server
+```
+ - URL : http://public-ip:9000/
+```
