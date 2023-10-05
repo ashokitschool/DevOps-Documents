@@ -1,9 +1,9 @@
 # Install Docker In Amazon Linux VM
 
-$ sudo yum update -y
+```$ sudo yum update -y 
 $ sudo yum install docker -y
 $ sudo service docker start
-
+```
 # add ec2-user to docker group by executing below command
 $ sudo usermod -aG docker ec2-user
 
