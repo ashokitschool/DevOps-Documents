@@ -1,5 +1,7 @@
 # ELK Stack #
 
+# Video : https://youtu.be/n2HHAvpn6Jo
+
 ELK is the combination of 3 open source products
 
 1) Elastic Search   : It is used to store and process logs
