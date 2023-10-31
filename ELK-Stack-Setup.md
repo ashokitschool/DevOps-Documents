@@ -10,9 +10,9 @@ ELK is the combination of 3 open source products
 # ELK Setu p#
 
 1) Download ELK Softwares
-		=>  Elastic Search : https://www.elastic.co/downloads/elasticsearch
-		=>  Kibana : https://www.elastic.co/downloads/kibana
-		=>  Logstash : https://www.elastic.co/downloads/logstash
+     - Elastic Search : https://www.elastic.co/downloads/elasticsearch
+     - Kibana : https://www.elastic.co/downloads/kibana
+     - Logstash : https://www.elastic.co/downloads/logstash
 
 2) Extract all zip files 
 
