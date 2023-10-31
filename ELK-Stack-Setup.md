@@ -31,7 +31,8 @@ ELK is the combination of 3 open source products
 
 8) create logstash.conf file like below 
 
-``` input {
+```
+input {
   file {
 	path => "C:/Users/ashok/classes/22-JRTP/workspace/SpringBoot_REST_API/app.log"
 	start_position => "beginning"
@@ -42,7 +43,8 @@ output {
   elasticsearch {
     hosts => ["http://localhost:9200"]
   }
-}  ```
+}
+```
 
 9) Run logstash server using below command 
 
