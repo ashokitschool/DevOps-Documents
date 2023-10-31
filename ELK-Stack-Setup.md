@@ -32,9 +32,6 @@ ELK is the combination of 3 open source products
 
 8) create logstash.conf file like below 
 
-# Sample Logstash configuration for creating a simple
-# Beats -> Logstash -> Elasticsearch pipeline.
-
 input {
   file {
 	path => "C:/Users/ashok/classes/22-JRTP/workspace/SpringBoot_REST_API/app.log"
@@ -50,7 +47,7 @@ output {
 
 9) Run logstash server using below command 
 
-` $ logstash -f logstash-sample.conf `
+  ` $ logstash -f logstash-sample.conf `
 
 10) Check logstash server is running or not ( http://localhost:9600 )
 
