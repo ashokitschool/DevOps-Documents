@@ -5,9 +5,8 @@ ELK is the combination of 3 open source products
 1) Elastic Search   : It is used to store and process logs
 2) Logstash  : It is used to collect application logs and store in Elastic Search
 3) Kibana : It will provide user interface to monitor application logs
-=> By using the above 3 products we can implement Log Aggregation and Logs Monitoring
 
-# ELK Setu p#
+# ELK Setup #
 
 1) Download ELK Softwares
      - Elastic Search : https://www.elastic.co/downloads/elasticsearch
@@ -32,7 +31,7 @@ ELK is the combination of 3 open source products
 
 8) create logstash.conf file like below 
 
-` input {
+``` input {
   file {
 	path => "C:/Users/ashok/classes/22-JRTP/workspace/SpringBoot_REST_API/app.log"
 	start_position => "beginning"
@@ -43,7 +42,7 @@ output {
   elasticsearch {
     hosts => ["http://localhost:9200"]
   }
-} `
+}  ```
 
 9) Run logstash server using below command 
 
