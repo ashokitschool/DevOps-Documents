@@ -26,11 +26,8 @@ $ sudo systemctl status jenkins <br/>
 5) Create Admin Account & Install Required Plugins in Jenkins
 
 
-# Step - 2 : Install Maven & Git in Jenkins #
-1) install maven with below command <br/>
- $ sudo apt install maven -y <br/> <br/>
-2) install git with below command <br/>
- $ sudo apt install git -y <br/> <br/>
+# Step - 2 : Configure Maven as Global Tool in Jenkins #
+1) Manage Jenkins -> Tools -> Maven Installation -> Add maven <br/>
 
 # Step - 3 : Setup Docker in Jenkins #
 1) install docker <br/>
@@ -57,7 +54,6 @@ $ sudo docker version
 3) Install AWS CLI latest version using below commands 
 
 	$ sudo apt install unzip <br/>
-	$ cd  <br/>
 	$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" <br/>
 	$ unzip awscliv2.zip <br/>
 	$ sudo ./aws/install <br/>
@@ -127,7 +123,7 @@ $ kubectl version --short --client <br/>
 	$ sudo mkdir .kube  <br/>
 	$ sudo vi .kube/config  <br/>
 
-3) Execute below commands in Jenkins Server and paste kube config file for ubuntu user <br/>
+3) Execute below commands in Jenkins Server and paste kube config file for ubuntu user to check EKS Cluster info<br/>
 	$ cd ~ <br/>
 	$ ls -la  <br/>
 	$ sudo vi .kube/config  <br/>
@@ -136,7 +132,6 @@ $ kubectl version --short --client <br/>
 	$ kubectl get nodes 
 
 **Note: We should be able to see EKS cluster nodes here.**
-
 
 # Step - 10 : Create Jenkins CI Job #
 
@@ -159,7 +154,7 @@ $ kubectl version --short --client <br/>
 	
 # Step - 13 : Access Application in Browser #
 - **We should be able to access our application** <br/>
-URL : http://LBR/context-path
+URL : http://LBR/context-path/
 	
 # We are done with our Setup #
 	
