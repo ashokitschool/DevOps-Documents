@@ -159,7 +159,7 @@ $ kubectl version --short --client <br/>
 	
 # Step - 13 : Access Application in Browser #
 - **We should be able to access our application** <br/>
-URL : http://Node-public-ip:NodePort/context-path
+URL : http://LBR/context-path
 	
 # We are done with our Setup #
 	
