@@ -18,11 +18,12 @@ exit
 ## Step-3 : Rress 'R' to restart the session (This is in MobaXterm)
 
 ## Step-4 :  Verify docker installation
-$ docker -v
-
+```
+docker -v
+```
 ## Step-5 : Run SonarQube using docker image
 ```
-$ docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:lts-community
+docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:lts-community
 ```
 
 ## Step-6: Enable 9000 port number in Security Group Inbound Rules & Access Sonar Server
