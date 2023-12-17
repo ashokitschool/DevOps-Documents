@@ -7,13 +7,10 @@
 
 # Step-1 : Jenkins Server Setup in Linux VM #
 
-1) Create Linux VM
-
 1) Create Ubuntu VM using AWS EC2 (t2.medium) <br/>
 2) Enable 8080 Port Number in Security Group Inbound Rules
 3) Connect to VM using MobaXterm
-
-2) Instal Java
+4) Instal Java
 
 ```
 sudo apt update
@@ -31,7 +28,6 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 ```
-
 4) Start Jenkins
 
 ```
