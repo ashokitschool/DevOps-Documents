@@ -5,31 +5,64 @@
 4) Docker
 5) Kubernetes
 
-# Step - 1 : Jenkins Server Setup #
+# Step-1 : Jenkins Server Setup in Linux VM #
+
+1) Create Linux VM
+
 1) Create Ubuntu VM using AWS EC2 (t2.medium) <br/>
-2) Enable SSH & 8080 Ports in Ec2 Security Group <br/>
-3) Install Java & Jenkins using below commands <br/>
-$ sudo apt-get update <br/>
-$ sudo apt-get install default-jdk <br/>
-$ curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
-  /usr/share/keyrings/jenkins-keyring.asc > /dev/null <br/>
-$ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+2) Enable 8080 Port Number in Security Group Inbound Rules
+3) Connect to VM using MobaXterm
+
+2) Instal Java
+
+```
+sudo apt update
+sudo apt install fontconfig openjdk-17-jre
+java -version
+```
+
+3) Install Jenkins
+```
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null <br/>
-$ sudo apt-get update <br/>
-$ sudo apt-get install jenkins <br/>
-$ sudo systemctl status jenkins <br/>
-3) Copy jenkins admin pwd <br/>
-	$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-4) Open jenkins server in browser using VM public ip <br/>
-           URL : http://public-ip:8080/
-5) Create Admin Account & Install Required Plugins in Jenkins
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
+4) Start Jenkins
+
+```
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+```
+
+5) Verify Jenkins
+
+```
+sudo systemctl status jenkins
+```
+	
+6) Open jenkins server in browser using VM public ip
+
+```
+http://public-ip:8080/
+```
+
+7) Copy jenkins admin pwd
+```
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+	   
+8) Create Admin Account & Install Required Plugins in Jenkins
 
 
-# Step - 2 : Configure Maven as Global Tool in Jenkins #
+## Step-2 : Configure Maven as Global Tool in Jenkins ##
 1) Manage Jenkins -> Tools -> Maven Installation -> Add maven <br/>
 
-# Step - 3 : Setup Docker in Jenkins #
+## Step-3 : Setup Docker in Jenkins ##
 ```
 curl -fsSL get.docker.com | /bin/bash
 sudo usermod -aG docker jenkins
@@ -41,11 +74,12 @@ sudo docker version
 
 1) Launch new Ubuntu VM using AWS Ec2 ( t2.micro )	  
 2) Connect to machine and install kubectl using below commands  
-	$ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl <br/>
-	$ chmod +x ./kubectl <br/>
-	$ sudo mv ./kubectl /usr/local/bin <br/>
-	$ kubectl version --short --client <br/>
-
+```
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl <br/>
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin
+kubectl version --short --client
+```
 3) Install AWS CLI latest version using below commands 
 ```
 sudo apt install unzip 
@@ -91,10 +125,10 @@ eksctl create cluster --name ashokit-cluster --region ap-south-1 --node-type t2.
 ```
 
 Note: Cluster creation will take 5 to 10 mins of time (we have to wait). After cluster created we can check nodes using below command.	
-
-$ kubectl get nodes  
-
-# Step - 7 :: Install AWS CLI in JENKINS Server #
+```
+kubectl get nodes  
+```
+# Step - 7 : Install AWS CLI in JENKINS Server #
 
 URL : https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html  
 
