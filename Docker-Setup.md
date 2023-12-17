@@ -1,4 +1,4 @@
-## Step-1 : Setup Linux VM (Amazon Linux AMI)
+## Step-1 : Setup Linux VM (Amazon Linux / Ubuntu)
 
 1) Login into AWS Cloud account
 2) Create Linux VM and connect to it using MobaXterm
