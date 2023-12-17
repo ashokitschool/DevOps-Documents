@@ -45,7 +45,8 @@ http://public-ip:8080/
 ```
 
 ## Step-7 : Copy jenkins admin pwd ##
-
+```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-		   
+```
+	   
 ## Step-8 : Create Admin Account & Install Required Plugins in Jenkins ##
