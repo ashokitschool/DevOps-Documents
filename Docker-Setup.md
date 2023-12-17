@@ -22,4 +22,7 @@ exit
 ```
 
 ## Verify docker installation
+
+```
 docker -v
+```
