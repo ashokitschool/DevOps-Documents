@@ -30,17 +30,12 @@ $ sudo systemctl status jenkins <br/>
 1) Manage Jenkins -> Tools -> Maven Installation -> Add maven <br/>
 
 # Step - 3 : Setup Docker in Jenkins #
-1) install docker <br/>
-$ curl -fsSL get.docker.com | /bin/bash <br/>
-
-2) Add Jenkins user to docker group <br/>
-$ sudo usermod -aG docker jenkins  <br/>
-
-3) Restart Jenkins  <br/>
-$ sudo systemctl restart jenkins <br/>
-
-4) Verify docker installation  <br/>
-$ sudo docker version
+```
+curl -fsSL get.docker.com | /bin/bash
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+sudo docker version
+```
 
 # Step - 4 : Create EKS Management Host in AWS #
 
@@ -52,17 +47,20 @@ $ sudo docker version
 	$ kubectl version --short --client <br/>
 
 3) Install AWS CLI latest version using below commands 
+```
+sudo apt install unzip 
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+```
 
-	$ sudo apt install unzip <br/>
-	$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" <br/>
-	$ unzip awscliv2.zip <br/>
-	$ sudo ./aws/install <br/>
-	$ aws --version <br/>
-
-4) Install eksctl using below commands <br/>
-	$ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp <br/>
-	$ sudo mv /tmp/eksctl /usr/local/bin <br/>
-	$ eksctl version <br/>
+4) Install eksctl using below commands
+```
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+eksctl version <br/>
+```
 
 # Step - 5 : Create IAM role & attach to EKS Management Host & Jenkins Server #
 
@@ -88,7 +86,9 @@ eksctl create cluster --name cluster-name  \
 --nodes-max 2 \ 
 --zones <AZ-1>,<AZ-2>
 
-**Example: $ eksctl create cluster --name ashokit-cluster --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b**
+```
+eksctl create cluster --name ashokit-cluster --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b**
+```
 
 Note: Cluster creation will take 5 to 10 mins of time (we have to wait). After cluster created we can check nodes using below command.	
 
@@ -99,19 +99,22 @@ $ kubectl get nodes
 URL : https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html  
 
 **Execute below commands to install AWS CLI**
-
-$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" <br/>
-$ unzip awscliv2.zip <br/>
-$ sudo ./aws/install <br/>
-$ aws --version <br/>
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+```
  
 # Step - 8 : Install Kubectl in JENKINS Server #
 **Execute below commands in Jenkins server to install kubectl**
-	
-$ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl <br/>
-$ chmod +x ./kubectl <br/>
-$ sudo mv ./kubectl /usr/local/bin <br/>
-$ kubectl version --short --client <br/>
+
+```
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+udo mv ./kubectl /usr/local/bin
+kubectl version --short --client
+```
 
 # Step - 9 : Update EKS Cluster Config File in Jenkins Server #
 	
