@@ -12,10 +12,5 @@ sudo service docker start
 sudo usermod -aG docker ec2-user
 exit
 ```
-## Step-3: Restart the session
-exit
-
-## Step-4 : Then press 'R' to restart the session (This is in MobaXterm)
-
-## Step-5 :  Verify docker installation
+## Step-3 :  Verify docker installation
 docker -v
