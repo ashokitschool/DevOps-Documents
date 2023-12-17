@@ -50,7 +50,7 @@ output {
 
 9) Run logstash server using below command 
 
-  ` $ logstash -f logstash-sample.conf `
+  ` logstash -f logstash-sample.conf `
 
 10) Check logstash server is running or not ( http://localhost:9600 )
 
