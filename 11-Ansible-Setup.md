@@ -19,14 +19,14 @@ sudo passwd ansible
 sudo visudo
 ansible ALL=(ALL) NOPASSWD: ALL
 
-### 3) Update sshd config file ###
+### c) Update sshd config file ###
 ```
 sudo vi /etc/ssh/sshd_config
 ```
 -> comment PasswordAuthentication no
 -> PermitEmptyPasswords yes
 
-### 4) Restart the server ###
+### d) Restart the server ###
 ```   
 sudo service sshd restart
 ```
