@@ -1,4 +1,4 @@
-# Setup MySql DB Server on AWS EC2 Instance (Ubuntu) #
+# Ansible Setup in Amazon Linux VMs #
 
 ## Step-0: Create 3 Amazon Linux VMs in AWS (Free Tier Eligible - t2.micro)
 
