@@ -87,10 +87,10 @@ Note: Repeat above command by updating HOST IP for all the managed Servers.
 ```
 sudo vi /etc/ansible/hosts
 ```
-[webservers]
+[webservers] <br/>
 172.31.47.247
-
-[dbservers]
+<br/>
+[dbservers] <br/>
 172.31.44.90
 
 ## Step-5: Test Connectivity ##
