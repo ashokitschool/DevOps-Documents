@@ -35,10 +35,10 @@ Note: Do the above steps in all the 3 machines
 ## Step-2: Install Ansible in Control Node ##
 
 ### 1) Switch to Ansible user ### 
-
-  $ sudo su ansible
-  $ cd ~
-
+```
+sudo su ansible
+cd ~
+```
 ### 2) Install Python ###
 ```
   sudo yum install python3 -y
