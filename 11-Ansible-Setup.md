@@ -9,12 +9,12 @@ Note: Connect to all 3 VMs using MobaXterm
 
 ## Step-1: Execute below commands in all 3 VMs ##
 
-# 1) Create user #
+### 1) Create user ###
 ```
 sudo useradd ansible
 sudo passwd ansible
 ```
-# 2) Configure user in sudoers file #
+### 2) Configure user in sudoers file ###
 
 sudo visudo
 ansible ALL=(ALL) NOPASSWD: ALL
