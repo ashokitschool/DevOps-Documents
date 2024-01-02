@@ -9,12 +9,12 @@ Note: Connect to all 3 VMs using MobaXterm
 
 ## Step-1: Execute below commands in all 3 VMs ##
 
-### 1) Create user ###
+### a) Create user ###
 ```
 sudo useradd ansible
 sudo passwd ansible
 ```
-### 2) Configure user in sudoers file ###
+### b) Configure user in sudoers file ###
 
 sudo visudo
 ansible ALL=(ALL) NOPASSWD: ALL
@@ -34,39 +34,39 @@ Note: Do the above steps in all the 3 machines
 
 ## Step-2: Install Ansible in Control Node ##
 
-### 1) Switch to Ansible user ### 
+### a) Switch to Ansible user ### 
 ```
 sudo su ansible
 cd ~
 ```
-### 2) Install Python ###
+### b) Install Python ###
 ```
   sudo yum install python3 -y
 ```
-### 3) Check python version  ###
+### c) Check python version  ###
 ```
 python3 --version
 ```
-### 4) Install PIP (It is a python package manager) ###
+### d) Install PIP (It is a python package manager) ###
 ```
 sudo yum -y install python3-pip
 ```
-### 5) Install Ansible using Python PIP ###
+### e) Install Ansible using Python PIP ###
 ```
 pip3 install ansible --user
 ```
-### 6) Verify ansible version  ###
+### f) Verify ansible version  ###
 ```
 ansible --version
 ```
-### 7)  Create ansible folder under /etc ###
+### g)  Create ansible folder under /etc ###
 ```
 sudo mkdir /etc/ansible 
 ```
 
 ## Step-3: Generate SSH Key In Control Node and  Copy SSH key into Managed Nodes ##
 
-### 1) Switch to ansible user ###
+### a) Switch to ansible user ###
 
 ```
 sudo su ansible
@@ -75,7 +75,7 @@ sudo su ansible
 ```
 ssh-keygen
 ```
-### 2) Copy it to Managed Nodes as ansible user ###
+### b) Copy it to Managed Nodes as ansible user ###
 ```
 ssh-copy-id ansible@<ManagedNode-Private-IP>
 ```
