@@ -46,12 +46,12 @@ eksctl create cluster --name cluster-name  \
 --nodes-max 2 \ 
 --zones <AZ-1>,<AZ-2>
 
-**N. Virgina: <br/>
+## N. Virgina: <br/>
 `
 eksctl create cluster --name ashokit-cluster4 --region us-east-1 --node-type t2.medium  --zones us-east-1a,us-east-1b**
 <br/>
 `	
-**Mumbai: <br/>
+## Mumbai: <br/>
 `
 eksctl create cluster --name ashokit-cluster4 --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b**	
 `
