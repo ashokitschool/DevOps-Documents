@@ -60,7 +60,8 @@ eksctl create cluster --name ashokit-cluster4 --region ap-south-1 --node-type t2
 `
  kubectl get nodes  
 `
-**Note: We should be able to see EKS cluster nodes here.**
+
+## Note: We should be able to see EKS cluster nodes here.**
 
 # We are done with our Setup #
 	
