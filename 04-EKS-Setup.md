@@ -49,7 +49,6 @@ eksctl create cluster --name cluster-name  \
 ## N. Virgina: <br/>
 `
 eksctl create cluster --name ashokit-cluster4 --region us-east-1 --node-type t2.medium  --zones us-east-1a,us-east-1b
-<br/>
 `	
 ## Mumbai: <br/>
 `
