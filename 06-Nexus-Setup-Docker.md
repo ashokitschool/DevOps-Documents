@@ -26,7 +26,7 @@ docker -v
 docker run -d -p 8081:8081 --name nexus sonatype/nexus3
 ```
 
-## Step-6: Enable 8001 port number in Security Group Inbound Rules & Access Sonar Server
+## Step-6: Enable 8081 port number in Security Group Inbound Rules & Access Sonar Server
 ```
  http://public-ip:8081/
 ```
