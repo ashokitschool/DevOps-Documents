@@ -63,7 +63,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 curl -fsSL get.docker.com | /bin/bash
 sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
-sudo docker version
+sudo docker --version
 ```
 
 # Step - 4 : Create EKS Management Host in AWS #
