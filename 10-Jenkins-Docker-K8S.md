@@ -89,7 +89,7 @@ aws --version
 ```
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
-eksctl version <br/>
+eksctl version
 ```
 
 # Step - 5 : Create IAM role & attach to EKS Management Host & Jenkins Server #
