@@ -117,7 +117,7 @@ eksctl create cluster --name cluster-name  \
 --zones <AZ-1>,<AZ-2>
 
 ```
-eksctl create cluster --name ashokit-cluster --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b**
+eksctl create cluster --name ashokit-cluster --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b
 ```
 
 Note: Cluster creation will take 5 to 10 mins of time (we have to wait). After cluster created we can check nodes using below command.	
@@ -167,24 +167,47 @@ kubectl version --short --client
 
 **Note: We should be able to see EKS cluster nodes here.**
 
-# Step - 10 : Create Jenkins CI Job #
+# Step - 10 : Create Jenkins CI CD Job #
 
 - **Stage-1 : Clone Git Repo** <br/> 
-- **Stage-2 : Build** <br/>
+- **Stage-2 : Maven Build** <br/>
 - **Stage-3 : Create Docker Image** <br/>
 - **Stage-4 : Push Docker Image to Registry** <br/>
-- **Stage-5 : Trigger CD Job** <br/>
-	
-# Step - 11 : Create Jenkins CD Job #
+- **Stage-5 : Deploy app in k8s eks cluster** <br/>
 
-- **Stage-1 : Clone k8s manifestfiles** <br/>
-- **Stage-2 : Deploy app in k8s eks cluster** <br/>
-- **Stage-3 : Send confirmatin email** <br/>
+```
+pipeline {
+    agent any
+    
+    tools{
+        maven "Maven-3.9.9"
+    }
 
-	
-# Step - 12 : Trigger Jenkins CI Job #
-- **CI Job will execute all the stages and it will trigger CD Job** <br/>
-- **CD Job will fetch docker image and it will deploy on cluster** <br/>
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git 'https://github.com/ashokitschool/maven-web-app.git'
+            }
+        }
+        stage('Maven Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('Docker Image') {
+            steps {
+                sh 'docker build -t ashokit/mavenwebapp .'
+            }
+        }
+        stage('k8s deployment') {
+            steps {
+                sh 'kubectl apply -f k8s-deploy.yml'
+            }
+        }
+    }
+}
+
+```
 	
 # Step - 13 : Access Application in Browser #
 - **We should be able to access our application** <br/>
