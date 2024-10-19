@@ -215,4 +215,4 @@ URL : http://LBR/context-path/
 	
 # We are done with our Setup #
 	
-## Step - 12 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
+## Step - 13: After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
