@@ -27,10 +27,6 @@ eksctl version
 
 1) Create New Role using IAM service ( Select Usecase - ec2 ) 	
 2) Add below permissions for the role <br/>
-	- IAM - fullaccess <br/>
-	- VPC - fullaccess <br/>
-	- EC2 - fullaccess  <br/>
-	- CloudFomration - fullaccess  <br/>
 	- Administrator - acces <br/>
 		
 3) Enter Role Name (eksroleec2) 
@@ -61,11 +57,11 @@ eksctl create cluster --name ashokit-cluster4 --region ap-south-1 --node-type t2
  kubectl get nodes  
 `
 
-## Note: We should be able to see EKS cluster nodes here.**
+# Note: We should be able to see EKS cluster nodes here.**
 
 # We are done with our Setup #
 	
-## Step - 4 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
+# Step - 4 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing #
 
 ```
 eksctl delete cluster --name ashokit-cluster4 --region ap-south-1
