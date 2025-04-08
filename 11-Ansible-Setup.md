@@ -3,7 +3,7 @@
 ## Step-0: Create 3 Amazon Linux VMs in AWS (Free Tier Eligible - t2.micro)
 
 1 - Control Node <br/>
-2 - Managed Nodes
+2 - Managed Nodes / host Nodes
 
 Note: Connect to all 3 VMs using MobaXterm
 
