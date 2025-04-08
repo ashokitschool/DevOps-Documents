@@ -7,7 +7,7 @@
 
 Note: Connect to all 3 VMs using MobaXterm
 
-## Step-1: Execute below commands in all 3 VMs ##
+## Step-1: Setup User and Configure user in sudoers file and update SSHD Config File. Execute below commands in all 3 VMs ##
 
 ### a) Create user ###
 ```
