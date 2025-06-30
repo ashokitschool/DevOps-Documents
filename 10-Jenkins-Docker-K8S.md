@@ -59,6 +59,20 @@ eksctl create cluster --name cluster-name  \
 eksctl create cluster --name ashokit-cluster --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b
 ```
 
+alternatively, for spot instance
+
+eksctl create cluster \
+  --name cd-cluster \
+  --region ap-south-1 \
+  --zones ap-south-1c \
+  --zones ap-south-1b \
+  --nodegroup-name spot-nodes \
+  --node-type t3a.medium \
+  --nodes 2 \
+  --nodes-min 1 \
+  --nodes-max 3 \
+  --spot
+
 Note: Cluster creation will take 5 to 10 mins of time (we have to wait). After cluster created we can check nodes using below command.	
 ```
 kubectl get nodes  
