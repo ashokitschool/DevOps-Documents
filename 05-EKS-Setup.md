@@ -1,4 +1,4 @@
-# Step - 1 : Create EKS Management Host in AWS #
+## Step - 1 : Create EKS Management Host in AWS ##
 
 1) Launch new Ubuntu VM using AWS Ec2 ( t2.micro )	  
 2) Connect to machine and install kubectl using below commands  
@@ -23,7 +23,7 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 ```
-# Step - 2 : Create IAM role & attach to EKS Management Host #
+## Step - 2 : Create IAM role & attach to EKS Management Host ##
 
 1) Create New Role using IAM service ( Select Usecase - ec2 ) 	
 2) Add below permissions for the role <br/>
@@ -32,7 +32,7 @@ eksctl version
 3) Enter Role Name (eksroleec2) 
 4) Attach created role to EKS Management Host (Select EC2 => Click on Security => Modify IAM Role => attach IAM role we have created) 
 
-# Step - 3 : Create EKS Cluster using eksctl # 
+## Step - 3 : Create EKS Cluster using eksctl ## 
 **Syntax:** 
 
 eksctl create cluster --name cluster-name  \
@@ -57,11 +57,11 @@ eksctl create cluster --name ashokit-cluster4 --region ap-south-1 --node-type t2
  kubectl get nodes  
 `
 
-# Note: We should be able to see EKS cluster nodes here.**
+### Note: We should be able to see EKS cluster nodes here. ##
 
-# We are done with our Setup #
+### We are done with our Setup ###
 	
-# Step - 4 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing #
+## Step - 4 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
 
 ```
 eksctl delete cluster --name ashokit-cluster4 --region ap-south-1
