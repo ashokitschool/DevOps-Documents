@@ -5,7 +5,7 @@
 3) Jenkins
 4) Docker
 
-# Step-1 : Jenkins Server Setup in Linux VM #
+## Step-1 : Jenkins Server Setup in Linux VM ##
 
 1) Create Ubuntu VM using AWS EC2 (t2.medium) <br/>
 2) Enable 8080 Port Number in Security Group Inbound Rules
@@ -69,7 +69,7 @@ sudo systemctl restart jenkins
 sudo docker version
 ```
 
-# Step - 4 : Create Jenkins Job #
+## Step - 4 : Create Jenkins Job ##
 
 - **Stage-1 : Clone Git Repo** <br/> 
 - **Stage-2 : Maven Build** <br/>
