@@ -75,17 +75,52 @@ sudo docker version
 - **Stage-2 : Maven Build** <br/>
 - **Stage-3 : Create Docker Image** <br/>
 - **Stage-4 : Create Docker Container** <br/>
+
+```
+pipeline {
+    agent any
+    
+    tools{
+        maven 'Maven-3.9.9'
+    }
+    stages {
+        stage('clone') {
+            steps {
+              git 'https://github.com/ashokitschool/maven-web-app.git'
+            }
+        }
+        stage('build'){
+            steps{
+                 sh 'mvn clean package'
+            }
+        }
+        stage('docker image'){
+            steps {
+                sh 'docker build -t ashokit/mavenwebapp .'
+            }
+        }
+        stage('docker container'){
+            steps{
+                sh 'docker stop javaapp'
+                sh 'docker rm javaapp'
+                sh 'docker run -d -p 8081:8080 --name javaapp ashokit/mavenwebapp'
+            }
+        }
+    }
+}
+
+```
 	
-# Step - 5 : Trigger Jenkins Job #
+## Step - 5 : Trigger Jenkins Job ##
 
-# Step - 6 : Enable host port in security group inbound rules #
+## Step - 6 : Enable host port in security group inbound rules ##
 
-# Step - 7 : Access Application in Browser #
+## Step - 7 : Access Application in Browser ##
 
 - **We should be able to access our application** <br/>
 
-URL : http://public-ip:port/
+	URL : http://public-ip:port/maven-web-app/
 	
-# We are done with our Setup #
+### We are done with our Setup ###
 	
 ## Step - 8 : After your practise, delete resources we have used in AWS Cloud to avoid billing ##
