@@ -15,28 +15,31 @@ sudo service docker start
 sudo usermod -aG docker ec2-user
 exit
 ```
-## Step-3 : Rress 'R' to restart the session (This is in MobaXterm)
-
-## Step-4 :  Verify docker installation
+## Step-3 :  Verify docker installation
 ```
 docker -v
 ```
-## Step-5 : Run Nexus using docker image
+## Step-4 : Run Nexus using docker image
 ```
 docker run -d -p 8081:8081 --name nexus sonatype/nexus3
 ```
 
-## Step-6: Enable 8081 port number in Security Group Inbound Rules & Access Nexus Server
+## Step-5: Enable 8081 port number in Security Group Inbound Rules & Access Nexus Server
 ```
  http://public-ip:8081/
 ```
-## Step-7: Get nexus passsword from Docker Container
+## Step-6: Get nexus passsword from Docker Container
 ```
  docker ps
+```
+```
  docker exec -it <container-id> /bin/bash
+```
+```
  cat /nexus-data/admin.password 
 ```
-## Step-8: Login into Nexus Server
+
+## Step-7: Login into Nexus Server & Reset pwd
 
 
 
