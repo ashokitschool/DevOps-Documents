@@ -15,13 +15,11 @@ sudo service docker start
 sudo usermod -aG docker ec2-user
 exit
 ```
-## Step-3 : Rress 'R' to restart the session (This is in MobaXterm)
-
-## Step-4 :  Verify docker installation
+## Step-3 : Make SSH connection again and Verify docker installation
 ```
 docker -v
 ```
-## Step-5 : Run SonarQube using docker image
+## Step-4 : Run SonarQube using docker image
 ```
 docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:lts-community
 ```
