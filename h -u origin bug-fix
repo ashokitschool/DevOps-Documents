@@ -1,0 +1,172 @@
+[33md507f5f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mbug-fix[m[33m)[m Fixed a bug
+[33m060aebf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Update 05-EKS-Setup.md
+[33m8d1144b[m Update 06-Sonar-Setup-Docker.md
+[33m7b4695b[m Update 07-Nexus-Setup-Docker.md
+[33m5c12551[m Update 04-Jenkins-Docker-Project.md
+[33mc19bf52[m Update 04-Jenkins-Docker-Project.md
+[33m6d0a1ba[m Update 05-EKS-Setup.md
+[33m7a5fa39[m Update 10-Jenkins-Docker-K8S.md
+[33m91335c0[m Update 11-Ansible-Setup.md
+[33me683ad6[m Update 11-Ansible-Setup.md
+[33m1cb93f6[m Update 05-EKS-Setup.md
+[33m8981a42[m Update 13_MiniKube_Setup.md
+[33mb4fd749[m Update 13_MiniKube_Setup.md
+[33m66d5ed0[m Rename 13_MiniKube_Setup to 13_MiniKube_Setup.md
+[33m377c039[m Create 13_MiniKube_Setup
+[33m9c0acef[m Update 10-Jenkins-Docker-K8S.md
+[33m683595b[m Update 10-Jenkins-Docker-K8S.md
+[33md77f1cc[m Update 10-Jenkins-Docker-K8S.md
+[33mbb3bb5e[m Update 10-Jenkins-Docker-K8S.md
+[33m2cbc278[m Update 10-Jenkins-Docker-K8S.md
+[33m16876c2[m Update 10-Jenkins-Docker-K8S.md
+[33m75383ac[m Update 11-Ansible-Setup.md
+[33m89b0a3e[m Update 11-Ansible-Setup.md
+[33m0a3a496[m Rename 11_MySQL_DB_Setup.md to 12_MySQL_DB_Setup.md
+[33mff75c0e[m Rename 10_MySQL_DB_Setup.md to 11_MySQL_DB_Setup.md
+[33m89e6441[m Rename 09-Jenkins-Docker-K8S.md to 10-Jenkins-Docker-K8S.md
+[33m9fcb9df[m Rename 08-DEVOPS-PROJECT-SETUP.md to 09-DEVOPS-PROJECT-SETUP.md
+[33ma75ff77[m Rename 07-ELK-Stack-Setup.md to 08-ELK-Stack-Setup.md
+[33m2e81ac3[m Rename 06-Nexus-Setup-Docker.md to 07-Nexus-Setup-Docker.md
+[33m8a8a740[m Rename 05-Sonar-Setup-Docker.md to 06-Sonar-Setup-Docker.md
+[33md7db690[m Rename 04-EKS-Setup.md to 05-EKS-Setup.md
+[33me2049c8[m Rename 03-Jenkins-Docker-Project.md to 04-Jenkins-Docker-Project.md
+[33m0c13b8e[m Rename 02-Jenkins-Docker-Project.md to 03-Jenkins-Docker-Project.md
+[33m49a87fa[m Create 02-Jenkins-Docker-Project.md
+[33m9d6c0cc[m Update 06-Nexus-Setup-Docker.md
+[33mfae30ab[m Update 06-Nexus-Setup-Docker.md
+[33m76d2ef9[m Update 09-Jenkins-Docker-K8S.md
+[33m8d07fb4[m Update 09-Jenkins-Docker-K8S.md
+[33m988ecde[m Update 04-EKS-Setup.md
+[33m39d6875[m Update 04-EKS-Setup.md
+[33madc6520[m Update 04-EKS-Setup.md
+[33m0ed1d57[m Update 04-EKS-Setup.md
+[33mf35589f[m Update 04-EKS-Setup.md
+[33m5750af5[m Update 04-EKS-Setup.md
+[33m886ad6e[m Update 04-EKS-Setup.md
+[33m9ec4c46[m Update 04-EKS-Setup.md
+[33mf913c4e[m Update 04-EKS-Setup.md
+[33mcf40bd5[m Update 11-Ansible-Setup.md
+[33ma0c029b[m Update 11-Ansible-Setup.md
+[33me36f49b[m Update 11-Ansible-Setup.md
+[33me508360[m Update 11-Ansible-Setup.md
+[33m4aa271a[m Update 11-Ansible-Setup.md
+[33mca7cdb5[m Update 11-Ansible-Setup.md
+[33m9ae0d6b[m Update 11-Ansible-Setup.md
+[33mcd314b7[m Create 11-Ansible-Setup.md
+[33m67c7e6a[m Update 10_MySQL_DB_Setup.md
+[33mbb0ad17[m Create 10_MySQL_DB_Setup.md
+[33mb34a23e[m Update 09-Jenkins-Docker-K8S.md
+[33m5ddf759[m Update 09-Jenkins-Docker-K8S.md
+[33mf1ceeef[m Update 07-ELK-Stack-Setup.md
+[33m9afe421[m Update 04-EKS-Setup.md
+[33m1c57756[m Update 03-Docker-Compose-Setup.md
+[33m3dbede1[m new files
+[33m8e26d3f[m Update Jenkins-Server-Setup.md
+[33mde7ebe1[m Create Jenkins-Server-Setup.md
+[33m32d2195[m Update Jenkins-Docker-K8S.md
+[33mbc1df4e[m Create Nexus-Setup-Docker.md
+[33m342f570[m Update Sonar-Setup-Docker.md
+[33m4af1661[m Update Sonar-Setup-Docker.md
+[33m6a49833[m Update Docker-Setup.md
+[33mca4c581[m Update Docker-Setup.md
+[33m7fb0422[m Update Docker-Setup.md
+[33mf88d2c6[m Update Docker-Setup.md
+[33meb834f0[m Update Docker-Setup.md
+[33m87dc8f9[m Update Docker-Setup.md
+[33m098c305[m Update Jenkins-Docker-K8S.md
+[33m5c70213[m Update Jenkins-Docker-K8S.md
+[33ma999500[m Update Jenkins-Docker-K8S.md
+[33m254b7ea[m Update Jenkins-Docker-K8S.md
+[33m2d1d5e8[m Update Jenkins-Docker-K8S.md
+[33m7b42d0a[m Update ELK-Stack-Setup.md
+[33m1351df0[m Update ELK-Stack-Setup.md
+[33m7f483f0[m Update ELK-Stack-Setup.md
+[33mc9443aa[m Update ELK-Stack-Setup.md
+[33mc99714f[m Update ELK-Stack-Setup.md
+[33meaf9d77[m Update ELK-Stack-Setup.md
+[33m71bd50f[m Create ELK-Stack-Setup.md
+[33mb4ed9ac[m Update Sonar-Setup-Docker.md
+[33me5b772d[m Create Sonar-Setup-Docker.md
+[33md0ba5db[m Update Docker-Setup.md
+[33m428ef06[m Update Docker-Setup.md
+[33m906d973[m Update Docker-Setup.md
+[33m4b14bbb[m Update Docker-Setup.md
+[33mdc5290f[m Create Docker-Setup.md
+[33mae35561[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33m59904b5[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33m96cdcb8[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33m9920a55[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33m3d7e7dc[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33me70b2a7[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33m308bdcb[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33mdf424d1[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33m2f55083[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33m56f0dbe[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33m1d26acf[m Update 01-DEVOPS-PROJECT-SETUP.md
+[33m7af86dc[m Create 01-DEVOPS-PROJECT-SETUP.md
+[33m4c44aba[m Update EKS-Setup.md
+[33m1748d57[m Add files via upload
+[33mbaf0b99[m Update Docker-Compose-Setup.md
+[33m32e375d[m Rename Docker-Compose-Setup to Docker-Compose-Setup.md
+[33m77e55f6[m Add files via upload
+[33me62e2d5[m Add files via upload
+[33m80caeb1[m Create Docker-Compose-Setup
+[33m6c420ff[m Update Jenkins-Docker-K8S.md
+[33mf14467e[m Update EKS-Setup.md
+[33m6211b0b[m Update EKS-Setup.md
+[33m92ef435[m Update EKS-Setup.md
+[33m6d0f1d9[m Update EKS-Setup.md
+[33ma2b488f[m Update EKS-Setup.md
+[33me8cd4ce[m Update EKS-Setup.md
+[33m4bb44b4[m Update EKS-Setup.md
+[33md577bca[m Create EKS-Setup.md
+[33ma32ce06[m Update Jenkins-Docker-K8S.md
+[33m5e9384c[m Update Jenkins-Docker-K8S.md
+[33mbb43d93[m Update Jenkins-Docker-K8S.md
+[33m8e1b628[m Rename Jenkins+Docker+K8S.md to Jenkins-Docker-K8S.md
+[33m5902aed[m Update Jenkins+Docker+K8S.md
+[33m5cad4e9[m Update Jenkins+Docker+K8S.md
+[33m7540c04[m Update Jenkins+Docker+K8S.md
+[33md430711[m Update Jenkins+Docker+K8S.md
+[33meb4348a[m Update Jenkins+Docker+K8S.md
+[33m7888782[m Update Jenkins+Docker+K8S.md
+[33mf77f3e6[m Update Jenkins+Docker+K8S.md
+[33m93ec173[m Update Jenkins+Docker+K8S.md
+[33m68ae50d[m Update Jenkins+Docker+K8S.md
+[33m3ed79d7[m Update Jenkins+Docker+K8S.md
+[33mb9f4227[m Update Jenkins+Docker+K8S.md
+[33m84044b6[m Update Jenkins+Docker+K8S.md
+[33mea7519c[m Update Jenkins+Docker+K8S.md
+[33m75ccf1c[m Update Jenkins+Docker+K8S.md
+[33m0bb7ed5[m Update Jenkins+Docker+K8S.md
+[33m2edec12[m Update Jenkins+Docker+K8S.md
+[33m13b9e5c[m Rename README.md to Jenkins+Docker+K8S.md
+[33me453af0[m Update README.md
+[33m3163f1d[m Update README.md
+[33mdf374b6[m Update README.md
+[33m9dedd84[m Update README.md
+[33me8191f3[m Update README.md
+[33m5434367[m Update README.md
+[33m4cce074[m Update README.md
+[33me89209d[m Update README.md
+[33mf1d2681[m Update README.md
+[33m5287d0f[m Update README.md
+[33m110d556[m Update README.md
+[33mca0db49[m Update README.md
+[33m0be53c6[m Update README.md
+[33m0b2cdc5[m Update README.md
+[33mfe158ff[m Update README.md
+[33m3b84e0c[m Update README.md
+[33m9e1c340[m Update README.md
+[33m01c24e7[m Update README.md
+[33m3cb603a[m Update README.md
+[33m038c06b[m Update README.md
+[33mbc8aa8b[m Update README.md
+[33ma16a9df[m Update README.md
+[33me48bbd6[m Update README.md
+[33m7595169[m Update README.md
+[33m4f8bcf8[m Update README.md
+[33mfd357a5[m Update README.md
+[33m9095276[m Update README.md
+[33m86900e6[m Update README.md
+[33m0b491c8[m Create README.md
